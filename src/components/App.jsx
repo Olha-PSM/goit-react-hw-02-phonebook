@@ -56,12 +56,12 @@ export class App extends Component {
       <div>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <h1>Contacts</h1>
+        <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={visibleContacts()}
           onDelete={this.deleteContact}
         />
-        <Filter value={filter} onChange={this.changeFilter} />
       </div>
     );
   }
